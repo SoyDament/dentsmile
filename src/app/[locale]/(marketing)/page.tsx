@@ -117,6 +117,7 @@ export default async function Index(props: { params: Promise<{ locale: string }>
           <div className="p-10 md:w-3/5">
             <form
               action={async (formData) => {
+                'use server';
                 await createLead(formData);
               }}
               className="space-y-4"
